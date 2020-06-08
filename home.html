@@ -1,0 +1,206 @@
+<!doctype html>
+            <html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>NewProject Form</title>
+
+    <style>
+
+        body{
+
+            max-height:80%;
+           
+
+        }
+
+    
+
+        h1{
+
+            text-align:center;
+            margin:5% 0;
+        }
+
+        .h1first{
+
+            margin-left:33%;
+
+        }
+
+        form{
+
+            margin-left:35%;
+        }
+
+        .form2{
+
+            padding-top:15px;
+            padding-bottom:15px;
+            padding-left:150px;
+            padding-right:150px;
+            margin:10px 0;
+        
+        }
+
+        .body2{
+
+            box-sizing:border-box;
+            
+        }
+        
+        @font-face{
+
+            font-family:couture-bld;
+            src: url(fonts/GeosansLight.ttf);
+        }
+
+        button{
+
+            padding:10px 50px;
+            margin-left:25%;
+            margin-top:5%;
+            margin-bottom:3%;
+            border-radius:8px;
+            cursor:pointer;
+            background-color:cornflowerblue;
+            border:none;
+            font-size:20px;
+
+        }
+
+        button:hover{
+
+            background-color:rgb(138, 168, 207);
+            color:white;
+            transition:.5s;
+        }
+
+        input:focus, textarea:focus{
+
+            border:3px solid rgb(40, 158, 99);
+            outline:none;
+        }
+
+        select:focus{
+
+            border:3px solid rgb(40, 158, 99);
+            outline:none;
+            
+        }
+
+        option:focus{
+
+            border:3px solid rgb(40, 158, 99);
+            outline:none;
+        }
+
+        label span{
+
+            display:inline-block;
+            width:70px;
+            height:33px;
+            background:#bbb;
+            border-radius:18px;
+        }
+
+        label span:before{
+
+            content:'';
+            height:24px;
+            width:24px;
+            display:block;
+            border:2px solid transparent;
+            background-color:white;
+            border-radius:50%;
+            margin:4px;
+            transition: all .2s ease-in-out;
+        }
+
+        .checkbox1[type="checkbox"]:checked + span:before{
+
+            transform:translateX(35px);
+            background:#31ad61;
+
+        }
+
+        .checkbox1[type="checked"]:checked + span{
+
+            background:#d1e8da;
+
+        }
+
+        .checkbox1:focus + span {
+
+            
+            box-sizing:border-box;
+            background:rgb(11, 150, 73);
+
+        }
+
+        .checkbox1[type="checkbox"] {
+
+            opacity:0;
+            width:1px;
+            height:1px;
+            overflow:hidden;
+            display:inline-block;
+        }
+
+    </style>
+    </head>
+
+    <body>
+        
+        <div class="row">
+            <div class="col-md-4" id="col1"> 
+                <img src="images/background2.jpeg" style="width:650px; position:fixed;">
+            </div>
+            <div  class="col-md-8" class="body2">
+                <h1 class="display-3 h1first">Olá, bem vindo!</h1>
+                <h3 style="margin-left:50%; margin-bottom:5%;">preencha o formulário</h3>
+                <form method="POST" action="form.php">
+                    <div>
+                    <input type="text" name="nome" placeholder="Digite seu nome" class="form2">
+                </div>
+                <div>
+                    <input type="text" name="sobrenome" placeholder="Digite seu sobrenome" class="form2">
+                </div>
+                <div>
+                    <input type="email" name="email" placeholder="Digite seu email" class="form2">
+                </div>
+                <div>
+                    <hr>
+                    <h4>Escolha o curso desejado</h4>
+                    <select id="select1" name="options" class="form2">
+                        <option value="selecione">Selectione o curso ...</option>
+                        <option value="HTML5">HTML5</option>
+                        <option value="CSS3">CSS3</option>
+                        <option value="JavaScript">JavaScript</option>
+                        <option value="PHP">PHP</option>
+                        <option value="Python">PYTHON</option>
+                    </select>
+                </div>
+                <div>
+                    <label for="text">Digite sua mensagem</label>
+                    <br>
+                    <textarea style="width:400px; height:100px; margin-left:35px; margin-top:4%;" maxlength="200" required name="textarea">
+                    </textarea>
+                </div>
+                <div>
+                    <button type="submit">Enviar</button>
+                </div>
+                <label>
+                    <input type="checkbox" class="checkbox1">
+                    <span> </span>
+                    Aceito os termos..
+                </label>
+            </form>
+        </div>
+    </div>
+
+</body>
